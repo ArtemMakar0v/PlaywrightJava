@@ -4,7 +4,11 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 import static com.private24.constants.Constant.CURRENCY.CURRENCY_UAH;
 import static com.private24.constants.Constant.DOMAINS_URL.PRIVAT24_MOBILE_REPLENISHMENT_URL;
-import static com.private24.constants.Constant.TestDataForMobileReplenishment.*;
+import static com.private24.constants.Constant.TestDataForMobileReplenishment.CVV_CODE_CARD_1;
+import static com.private24.constants.Constant.TestDataForMobileReplenishment.EXP_DATE_CARD_1;
+import static com.private24.constants.Constant.TestDataForMobileReplenishment.PHONE_NUMBER_UKRAINE;
+import static com.private24.constants.Constant.TestDataForMobileReplenishment.TEST_CARD_1;
+import static com.private24.constants.Constant.TestDataForMobileReplenishment.TEST_CARD_1_THE_LAST_FOUR_DIGITS;
 
 public class MobilePhoneReplenishmentPositiveTest extends BaseTest {
 
