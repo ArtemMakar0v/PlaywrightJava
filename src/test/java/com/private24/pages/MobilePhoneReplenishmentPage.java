@@ -17,10 +17,10 @@ public class MobilePhoneReplenishmentPage extends BasePage {
     private final String buttonSubmitPayment = "//button[@data-qa-node='submit']";
     private final String cardNumberInTheCart = "//td[@data-qa-node='card']";
     private final String recipientNameInTheCart = "//span[@data-qa-node='nameB']";
-    private String amountInTheCart = "//div[@data-qa-node='amount']";
-    private String commissionInTheCart = "//span[@data-qa-node='commission']";
-    private String commissionCurrencyInTheCard = "//span[@data-qa-node='commission-currency']";
-    private String walletButton = "//div[@data-qa-node='debitSourceSource']";
+    private final String amountInTheCart = "//div[@data-qa-node='amount']";
+    private final String commissionInTheCart = "//span[@data-qa-node='commission']";
+    private final String commissionCurrencyInTheCard = "//span[@data-qa-node='commission-currency']";
+    private final String walletButton = "//div[@data-qa-node='debitSourceSource']";
 
     /**
      * Enter a phone number excluding country code
