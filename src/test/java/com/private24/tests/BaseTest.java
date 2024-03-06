@@ -5,6 +5,7 @@ import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 import com.private24.pages.BasePage;
+import com.private24.pages.CarLoansPage;
 import com.private24.pages.MobilePhoneReplenishmentPage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,6 +17,7 @@ public class BaseTest {
 
     protected BasePage basePage;
     protected MobilePhoneReplenishmentPage mobilePhoneReplenishmentPage;
+    protected CarLoansPage carLoansPage;
 
     @BeforeEach
     public void setUp() {
@@ -49,5 +51,6 @@ public class BaseTest {
         page = browser.newPage();
         basePage = new BasePage(page);
         mobilePhoneReplenishmentPage = new MobilePhoneReplenishmentPage(page);
+        carLoansPage = new CarLoansPage(page);
     }
 }

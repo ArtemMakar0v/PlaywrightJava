@@ -10,7 +10,7 @@ import static com.private24.constants.Constant.TestDataForMobileReplenishment.PH
 import static com.private24.constants.Constant.TestDataForMobileReplenishment.TEST_CARD_1;
 import static com.private24.constants.Constant.TestDataForMobileReplenishment.TEST_CARD_1_THE_LAST_FOUR_DIGITS;
 
-public class MobilePhoneReplenishmentPositiveTest extends BaseTest {
+public class MobilePhoneReplenishmentTest extends BaseTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"chromium", "firefox"})
