@@ -1,14 +1,18 @@
 package com.private24.pages;
 
+import com.microsoft.playwright.FrameLocator;
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import org.junit.jupiter.api.Assertions;
 
-public class CarLoansPage extends BasePage{
+public class CarLoansPage extends BasePage {
 
     public CarLoansPage(Page page) {
         super(page);
     }
 
     private final String agreementsTab = "//div[contains(text(), 'Agreements') and .//parent::a[@href='/auto-credit/my']]";
+    private final String authWidgetP24New = "iframe[src='https://login-widget.privat24.ua/']";
     private final String amountFieldCarCost = "//input[@data-qa-node='amount']";
     private final String amountFieldPrepaidExpense = "//input[@data-qa-node='prepaid']";
     private final String phoneCodeButton = "//button[@data-qa-node='phone-code']";
@@ -22,6 +26,14 @@ public class CarLoansPage extends BasePage{
 
     public CarLoansPage selectAgreementsTab() {
         page.click(agreementsTab);
+        return this;
+    }
+
+    public CarLoansPage checkIsDisplayedAuthWidget() {
+        FrameLocator frame = page.frameLocator(authWidgetP24New);
+        Locator h2El = frame.locator("h2").first();
+        String h2Text = h2El.innerText();
+        Assertions.assertEquals("Login/Registration", h2Text);
         return this;
     }
 

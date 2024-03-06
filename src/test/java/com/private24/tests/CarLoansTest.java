@@ -23,4 +23,14 @@ public class CarLoansTest extends BaseTest{
                 .checkIsDisplayedConfirm();
     }
 
+    @ParameterizedTest
+    @ValueSource(strings = {"chromium", "firefox"})
+    void checkRedirectOnAuthorization(String browserType) {
+        initiateBrowser(browserType);
+        basePage.navigateTo(PRIVAT24_CAR_LOANS_URL);
+        carLoansPage
+                .selectAgreementsTab()
+                .checkIsDisplayedAuthWidget();
+    }
+
 }
